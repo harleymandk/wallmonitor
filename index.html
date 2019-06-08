@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Net til Wallmonitor</title>
+ <link rel="stylesheet" href="css/style.css" type="text/css" />
+<!-- PoC kode af Harleyman_dk..... Any1 up for Dreamhack ? ideas : Status ,stuff fra flickr/facebook/twitter/IRC.... -->
+
+<style type="text/css" media="screen">
+#slider1 {
+width: 710px; /* important to be same as image width */
+height: 520px; /* important to be same as image height */
+position: relative; /* important */
+overflow: hidden; /* important */
+}
+#slider1Content {
+width: 720px; /* important to be same as image width or wider */
+position: absolute;
+top: 0;
+margin-left: 0;
+}
+.slider1Image {
+float: left;
+position: relative;
+display: none;
+}
+.slider1Image span {
+position: absolute;
+font: 10px/15px Arial, Helvetica, sans-serif;
+padding: 0px 1px;
+width: 1px;
+background-color: #222;
+filter: alpha(opacity=10);
+-moz-opacity: 0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+color: #fff;
+display: none;
+}
+.clear {
+clear: both;
+}
+.slider1Image span strong {
+font-size: 14px;
+}
+.left {
+top: 0;
+left: 0;
+width: 110px !important;
+height: 60px;
+}
+.right {
+right: 0;
+bottom: 0;
+width: 110px !important;
+height: 60px;
+}
+ul { list-style-type: none;}
+
+</style><!-- JavaScripts-->
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="s3SliderPacked.js"></script>
+<script type="text/javascript">$(document).ready(function() {$('#slider1').s3Slider({timeOut: 4000 }); });</script></head>
+<body onload="startTime()">
+<!-- Find graf : find /var/www/html/munin/ -regex ".*\.\(png\)" > log ; cat log-->
+<table style="" border="0" bordercolor="#ffffff" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td>
+
+
+</td>
+<td>                            
+<br /></td>
+<td>
+<h2>
+<left>
+<script>
+var d=new Date();
+var weekday=new Array("S0ndag","Mandag","Tirsdag","Onsdag","Torsdag","Fredag","L0rdag");
+var monthname=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+document.write(weekday[d.getDay()] + " ");
+document.write(d.getDate() + ". ");
+document.write(monthname[d.getMonth()] + " ");
+document.write(d.getFullYear());
+</script>
+
+<script>
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+
+</left><div id="txt"></div>
+
+</h2>
+
+</td>
+</tr>
+<tr>
+<td>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>
+
+<td>
+<center>
+<div id="slider1">
+<ul id="slider1Content">
+<li class="slider1Image"> <img src="machine-has-no-brain-gehirn.jpg" alt="5" height="480" width="680" />
+<span class="left"><strong>Du har et Ansvar!</strong><br />For at bruge hoved...</span></li>
+
+<li class="slider1Image"> <a href=""><img src="rrdgraph.png" alt="1" height="480" width="680" />
+</a> <span class="left"><strong>FIREWALL</strong><br />Net-Trafik</span></li>
+
+<li class="slider1Image"> <a href=""><img src="full.jpg" alt="2" height="480" width="680" />
+</a> <span class="right"><strong>ISOserver</strong><br />Trafik fra ISOserver</span></li>
+
+<li class="slider1Image"> <img src="rrdgraph.png" alt="4" height="480" width="680" /> 
+<span class="right"><strong>LAB-Switch 1</strong><br />Trafik@Switch 1</span></li>
+
+<li class="slider1Image"> <img src="full.jpg" alt="4" height="480" width="680" />
+<span class="left"><strong>LAB-Switch 2</strong><br />Trafik@Switch 2</span></li>
+
+<li class="slider1Image"> <img src="Codepunker-Noah-s-Ark.jpg" alt="5" height="460" width="680" />
+<span class="left"><strong>Vil du blive bedre til at kode?</strong><br />Join Us!!</span></li>
+
+<li class="slider1Image"> <img src="full.jpg" alt="5" height="480" width="680" /> 
+<span class="left"><strong>Support</strong><br />CPU on Support</span></li>
+
+<li class="slider1Image"> <img src="machine-has-no-brain-gehirn.jpg" alt="5" height="480" width="680" />
+<span class="left"><strong>Support</strong><br />TRAFIK on Support</span></li>
+
+<li class="slider1Image"> <img src="full.jpg" alt="5" height="480" width="680" />
+<span class="left"><strong>Support</strong><br />RAM on Support</span></li>
+
+
+<div class="clear slider1Image"></div>
+</ul>
+</div>
+<!--<script language="JavaScript" src="ticker.js"></script> -->
+
+</center>
+</td>
+<td>
+<iframe frameborder="0" style="border:0px;height:300px;" src="http://www.rejseplanen.dk/bin/stboard.exe/mn?L=vs_liveticker&input=Stamholmen (Hvidovre)!&start=yes&time=now&outputMode=tickerMode&tools=no&LTcss=by&productsFilter=1111111111100000&"></iframe>
+<br>
+<!-- start feedwind code -->
+<script type="text/javascript" src="http://vejret.tv2.dk/box/2618425/script.js"></script><!-- start feedwind code -->
+<br />
+<script type="text/javascript">
+<!--
+rssmikle_url="http://www.version2.dk/it-nyheder/rss";
+rssmikle_frame_width="300";
+rssmikle_frame_height="190";
+rssmikle_target="_blank";
+rssmikle_font="Arial, Helvetica, sans-serif";
+rssmikle_font_size="12";
+rssmikle_border="on";
+rssmikle_css_url="";
+rssmikle_title="on";
+rssmikle_title_bgcolor="#0066FF";
+rssmikle_title_color="#FFFFFF";
+rssmikle_title_bgimage="http://";
+rssmikle_item_bgcolor="#FFFFFF";
+rssmikle_item_bgimage="http://";
+rssmikle_item_title_length="80";
+rssmikle_item_title_color="#666666";
+rssmikle_item_border_bottom="off";
+rssmikle_item_description="off";
+rssmikle_item_description_length="40";
+rssmikle_item_description_color="#666666";
+rssmikle_item_date="gl1";
+rssmikle_item_description_tag="off";
+rssmikle_item_podcast="off";
+//-->
+
+</script>
+<script type="text/javascript" src="rsswidget.js"></script>
+<div style="font-size: 10px; text-align: right;"></div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- // slider -->
+</body></html>

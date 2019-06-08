@@ -1,0 +1,10 @@
+/*------------------------- Layout styles ------------------------*/ 
+body{
+	background:url(../images/bg-body.jpg) repeat-x center top #09154F;
+	margin: 0;
+}
+p a,h3 a{
+	text-decoration: underline;
+	color: #8B8B8B;
+}
+
