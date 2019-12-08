@@ -7,7 +7,12 @@ var tickerEntries = new Array(
 "................................YES!!!! -Vi fik 4 VFU pladser til Roskilde Festival 2014....",
 "Vil du lave vores nye hjemmeside til support???....",
 "se <b>www.computertec.dk</b> - hvad mangler der???....",
-"<b>http://NetStatus</b> har info om Servere og Nettet....."
+"<b>http://NetStatus</b> har info om Servere og Nettet.....",
+"<b>http://ISOserver</b> tilbyder ISOfiler(Windows+Linux),medie-filer og meget mere....Brug Windows share <b>isoserver</b> eller <b>x.x.0.245</b>",
+"Supporten's System : <b>http://support</b> .... HUSK! Du skal oprettes af en Admin fra supporten! Fuld domaine <b>*.skp-data.dk </b>",
+".....Vores WIFI tilbyder 2.4/5 Ghz <b>SSID: skp-data </b> adgangskoden er: <b>Pwrp1234</b>.........Firewallen er en <b>PFsense</b> og har lukket for <b> P2P/Torrent, TORnet og mange direkte forbundet online-spil</b>....dog IKKE steampowered spil...",
+"...Du er velkommen til at bruge en VPN/SSH/RemoteDesktop hjem til din egen maskine ;-)",
+" Vil du med os til DreamHack Vinter 2014 - Snak med Sune(SSAN),Peter eller Magnus! mere info: <b>www.dreamhack.dk</b> og join vores facebook gruppe!....."
 );
 
 //---------------------------------------------------------------------------------------------------------

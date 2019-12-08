@@ -2,17 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Net til Wallmonitor</title>
  <link rel="stylesheet" href="css/style.css" type="text/css" />
-<!-- PoC kode af Harleyman_dk..... Any1 up for Dreamhack ? ideas : Status ,stuff fra flickr/facebook/twitter/IRC.... -->
+<!--  Note2self : http://jquery.malsup.com/cycle2/  (Blinds!)
+
+
+ PoC kode af Harleyman_dk..... Any1 up for Dreamhack ? ideas : Status ,stuff fra flickr/facebook/twitter/IRC.... -->
 
 <style type="text/css" media="screen">
 #slider1 {
-width: 710px; /* important to be same as image width */
-height: 520px; /* important to be same as image height */
+width: 1020px; /* important to be same as image width */
+height: 600px; /* important to be same as image height */
 position: relative; /* important */
 overflow: hidden; /* important */
 }
 #slider1Content {
-width: 720px; /* important to be same as image width or wider */
+width: 600px; /* important to be same as image width or wider */
 position: absolute;
 top: 0;
 margin-left: 0;
@@ -39,29 +42,45 @@ display: none;
 clear: both;
 }
 .slider1Image span strong {
-font-size: 14px;
+font-size: 20px;
 }
 .left {
 top: 0;
 left: 0;
 width: 110px !important;
+ color:#000000;
 height: 60px;
 }
 .right {
 right: 0;
 bottom: 0;
 width: 110px !important;
+ color:#000000;
 height: 60px;
 }
 ul { list-style-type: none;}
+.html-marquee {
+  height:99px;
+  width:1537px;
+  background-color:#ffffff;
+  font-family: Comic Sans MS;
+ font-weight:bold;
+  font-size:40px;
+  color:#202020;
+
+}
+
 
 </style><!-- JavaScripts-->
 <script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="s3SliderPacked.js"></script>
-<script type="text/javascript">$(document).ready(function() {$('#slider1').s3Slider({timeOut: 4000 }); });</script></head>
+<script type="text/javascript">$(document).ready(function() {$('#slider1').s3Slider({timeOut: 4500 }); });</script></head>
 <body onload="startTime()">
 <!-- Find graf : find /var/www/html/munin/ -regex ".*\.\(png\)" > log ; cat log-->
 <table style="" border="0" bordercolor="#ffffff" cellpadding="0" cellspacing="0" width="100%">
+<marquee class="html-marquee" direction="left" behavior="scroll" scrollamount="10">
+<p>Welcome to STU LAN Party - Take a seat and start the GAME! ;-) Need a Pizza? Order Online on just-eat.dk !  </p>
+</marquee>
 <tbody>
 <tr>
 <td>
@@ -71,7 +90,7 @@ ul { list-style-type: none;}
 <td>                            
 <br /></td>
 <td>
-<h2>
+<h1>
 <left>
 <script>
 var d=new Date();
@@ -82,6 +101,8 @@ document.write(d.getDate() + ". ");
 document.write(monthname[d.getMonth()] + " ");
 document.write(d.getFullYear());
 </script>
+</style>
+
 
 <script>
 function startTime()
@@ -122,31 +143,34 @@ return i;
 <center>
 <div id="slider1">
 <ul id="slider1Content">
-<li class="slider1Image"> <img src="machine-has-no-brain-gehirn.jpg" alt="5" height="480" width="680" />
+<li class="slider1Image"> <img src="tumblr_lrb3llidyt1qifzwao1_500.gif" alt="1" height="580" width="800" />
 <span class="left"><strong>Du har et Ansvar!</strong><br />For at bruge hoved...</span></li>
 
-<li class="slider1Image"> <a href=""><img src="rrdgraph.png" alt="1" height="480" width="680" />
+<li class="slider1Image"> <a href=""><img src="rrdgraph.png" alt="1" height="580" width="800" />
 </a> <span class="left"><strong>FIREWALL</strong><br />Net-Trafik</span></li>
 
-<li class="slider1Image"> <a href=""><img src="full.jpg" alt="2" height="480" width="680" />
+<li class="slider1Image"> <a href=""><img src="full.jpg" alt="2" height="580" width="800" />
 </a> <span class="right"><strong>ISOserver</strong><br />Trafik fra ISOserver</span></li>
 
-<li class="slider1Image"> <img src="rrdgraph.png" alt="4" height="480" width="680" /> 
+<li class="slider1Image"> <img src="rrdgraph.png" alt="4" height="580" width="800" /> 
 <span class="right"><strong>LAB-Switch 1</strong><br />Trafik@Switch 1</span></li>
 
-<li class="slider1Image"> <img src="full.jpg" alt="4" height="480" width="680" />
+<li class="slider1Image"> <img src="full.jpg" alt="4" height="580" width="800" />
 <span class="left"><strong>LAB-Switch 2</strong><br />Trafik@Switch 2</span></li>
 
-<li class="slider1Image"> <img src="Codepunker-Noah-s-Ark.jpg" alt="5" height="460" width="680" />
+<li class="slider1Image"> <img src="Codepunker-Noah-s-Ark.jpg" alt="5" height="580" width="800" />
 <span class="left"><strong>Vil du blive bedre til at kode?</strong><br />Join Us!!</span></li>
 
-<li class="slider1Image"> <img src="full.jpg" alt="5" height="480" width="680" /> 
+<li class="slider1Image"> <img src="full.jpg" alt="5" height="580" width="800" /> 
 <span class="left"><strong>Support</strong><br />CPU on Support</span></li>
 
-<li class="slider1Image"> <img src="machine-has-no-brain-gehirn.jpg" alt="5" height="480" width="680" />
+<li class="slider1Image"> <img src="machine-has-no-brain-gehirn.jpg" alt="5" height="580" width="800" />
 <span class="left"><strong>Support</strong><br />TRAFIK on Support</span></li>
 
-<li class="slider1Image"> <img src="full.jpg" alt="5" height="480" width="680" />
+<li class="slider1Image"> <img src="Minion-Jokes-famous-a.jpg" alt="5" height="580" width="800" />
+<span class="right"><strong>Support</strong><br />TRAFIK on Support</span></li>
+
+<li class="slider1Image"> <img src="full.jpg" alt="5" height="580" width="800" />
 <span class="left"><strong>Support</strong><br />RAM on Support</span></li>
 
 
@@ -158,41 +182,8 @@ return i;
 </center>
 </td>
 <td>
-<iframe frameborder="0" style="border:0px;height:300px;" src="http://www.rejseplanen.dk/bin/stboard.exe/mn?L=vs_liveticker&input=Stamholmen (Hvidovre)!&start=yes&time=now&outputMode=tickerMode&tools=no&LTcss=by&productsFilter=1111111111100000&"></iframe>
+Et eller andet her
 <br>
-<!-- start feedwind code -->
-<script type="text/javascript" src="http://vejret.tv2.dk/box/2618425/script.js"></script><!-- start feedwind code -->
-<br />
-<script type="text/javascript">
-<!--
-rssmikle_url="http://www.version2.dk/it-nyheder/rss";
-rssmikle_frame_width="300";
-rssmikle_frame_height="190";
-rssmikle_target="_blank";
-rssmikle_font="Arial, Helvetica, sans-serif";
-rssmikle_font_size="12";
-rssmikle_border="on";
-rssmikle_css_url="";
-rssmikle_title="on";
-rssmikle_title_bgcolor="#0066FF";
-rssmikle_title_color="#FFFFFF";
-rssmikle_title_bgimage="http://";
-rssmikle_item_bgcolor="#FFFFFF";
-rssmikle_item_bgimage="http://";
-rssmikle_item_title_length="80";
-rssmikle_item_title_color="#666666";
-rssmikle_item_border_bottom="off";
-rssmikle_item_description="off";
-rssmikle_item_description_length="40";
-rssmikle_item_description_color="#666666";
-rssmikle_item_date="gl1";
-rssmikle_item_description_tag="off";
-rssmikle_item_podcast="off";
-//-->
-
-</script>
-<script type="text/javascript" src="rsswidget.js"></script>
-<div style="font-size: 10px; text-align: right;"></div>
 </td>
 </tr>
 <tr>
