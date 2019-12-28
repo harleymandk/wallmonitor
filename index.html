@@ -1,15 +1,14 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Net til Wallmonitor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>The LAN 2019</title>
  <link rel="stylesheet" href="css/style.css" type="text/css" />
 <!--  Note2self : http://jquery.malsup.com/cycle2/  (Blinds!)
-
-
- PoC kode af Harleyman_dk..... Any1 up for Dreamhack ? ideas : Status ,stuff fra flickr/facebook/twitter/IRC.... -->
+ PoC kode af Harleymandk..... Any1 up for Dreamhack ? ideas : Status ,stuff fra flickr/facebook/twitter/IRC.... 
+Open the code in a Browser and  Press F11 for FULL screen!!!  -->
 
 <style type="text/css" media="screen">
 #slider1 {
-width: 1020px; /* important to be same as image width */
+width: 1040px; /* important to be same as image width */
 height: 600px; /* important to be same as image height */
 position: relative; /* important */
 overflow: hidden; /* important */
@@ -60,16 +59,26 @@ height: 60px;
 }
 ul { list-style-type: none;}
 .html-marquee {
-  height:99px;
-  width:1537px;
+  height:139px;
+  width:1917px;
   background-color:#ffffff;
   font-family: Comic Sans MS;
  font-weight:bold;
-  font-size:40px;
+  font-size:60px;
   color:#202020;
 
 }
 
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #111; }
+    50%{    color: #600; }
+    90%{    color: #700;  }
+    100%{   color: #fff;    }
+}
 
 </style><!-- JavaScripts-->
 <script type="text/javascript" src="jquery.min.js"></script>
@@ -78,8 +87,8 @@ ul { list-style-type: none;}
 <body onload="startTime()">
 <!-- Find graf : find /var/www/html/munin/ -regex ".*\.\(png\)" > log ; cat log-->
 <table style="" border="0" bordercolor="#ffffff" cellpadding="0" cellspacing="0" width="100%">
-<marquee class="html-marquee" direction="left" behavior="scroll" scrollamount="10">
-<p>Welcome to STU LAN Party - Take a seat and start the GAME! ;-) Need a Pizza? Order Online on just-eat.dk !  </p>
+<marquee class="html-marquee" direction="left" behavior="scroll" scrollamount="9">
+<p>Welcome to the LAN Party - Take a seat and start the GAME! ;-) WIFI is open - use SSID : LanParty - Password: PassW0rd - Musik from : <span class="blinking">PartyZone.nu</span> - The Shop is open from 7 until 21 - Info about more LANPartys on <span class="blinking">Lanparty.dk</span> ;-)</p>
 </marquee>
 <tbody>
 <tr>
@@ -143,36 +152,28 @@ return i;
 <center>
 <div id="slider1">
 <ul id="slider1Content">
-<li class="slider1Image"> <img src="tumblr_lrb3llidyt1qifzwao1_500.gif" alt="1" height="580" width="800" />
-<span class="left"><strong>Du har et Ansvar!</strong><br />For at bruge hoved...</span></li>
 
-<li class="slider1Image"> <a href=""><img src="rrdgraph.png" alt="1" height="580" width="800" />
-</a> <span class="left"><strong>FIREWALL</strong><br />Net-Trafik</span></li>
+<li class="slider1Image"> <img src="merry_christmas_animated.gif" alt="1" height="580" width="800" />
+<span class="left"><strong>Fra Alle os til alle jer</strong><br />God Jul</span></li>
 
-<li class="slider1Image"> <a href=""><img src="full.jpg" alt="2" height="580" width="800" />
-</a> <span class="right"><strong>ISOserver</strong><br />Trafik fra ISOserver</span></li>
+<li class="slider1Image"> <img src="penvin.gif" alt="1" height="580" width="800" />
+<span class="left"><strong>Penvin in the house!</strong><br />ASK and I will Tell</span></li>
 
-<li class="slider1Image"> <img src="rrdgraph.png" alt="4" height="580" width="800" /> 
-<span class="right"><strong>LAB-Switch 1</strong><br />Trafik@Switch 1</span></li>
+<li class="slider1Image"> <img src="logo-geek-inside-by-rixr.jpg" alt="1" height="580" width="800" />
+<span class="left"><strong>Penvin in the house!</strong><br />ASK and I will Tell</span></li>
 
-<li class="slider1Image"> <img src="full.jpg" alt="4" height="580" width="800" />
-<span class="left"><strong>LAB-Switch 2</strong><br />Trafik@Switch 2</span></li>
 
-<li class="slider1Image"> <img src="Codepunker-Noah-s-Ark.jpg" alt="5" height="580" width="800" />
-<span class="left"><strong>Vil du blive bedre til at kode?</strong><br />Join Us!!</span></li>
+<li class="slider1Image"> <img src="machine-has-no-brain-gehirn.jpg" alt="4" height="580" width="800" /> 
+<span class="right"><strong>Du er Master hjernen bag din maskine!</strong><br /></span></li>
 
-<li class="slider1Image"> <img src="full.jpg" alt="5" height="580" width="800" /> 
-<span class="left"><strong>Support</strong><br />CPU on Support</span></li>
+<li class="slider1Image"> <img src="Codepunker-Noah-s-Ark.jpg" alt="4" height="580" width="800" />
+<span class="left"><strong></strong><br />Code is Life!</span></li>
 
-<li class="slider1Image"> <img src="machine-has-no-brain-gehirn.jpg" alt="5" height="580" width="800" />
-<span class="left"><strong>Support</strong><br />TRAFIK on Support</span></li>
+<li class="slider1Image"> <img src="Minion-Jokes-famous-a.jpg" alt="4" height="580" width="800" />
+<span class="left"><strong></strong><br />Minion Life!</span></li>
 
-<li class="slider1Image"> <img src="Minion-Jokes-famous-a.jpg" alt="5" height="580" width="800" />
-<span class="right"><strong>Support</strong><br />TRAFIK on Support</span></li>
-
-<li class="slider1Image"> <img src="full.jpg" alt="5" height="580" width="800" />
-<span class="left"><strong>Support</strong><br />RAM on Support</span></li>
-
+<li class="slider1Image"> <img src="Minion-Jokes-funny-google.jpg" alt="4" height="580" width="800" />
+<span class="left"><strong></strong><br />Minion Life!</span></li>
 
 <div class="clear slider1Image"></div>
 </ul>
@@ -182,7 +183,7 @@ return i;
 </center>
 </td>
 <td>
-Et eller andet her
+(RSS FEED)
 <br>
 </td>
 </tr>
